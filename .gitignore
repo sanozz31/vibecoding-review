@@ -1,0 +1,17 @@
+.DS_Store
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+.cache/
+
+# Editor and system files
+.idea/
+.vscode/
+
