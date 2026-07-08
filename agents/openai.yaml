@@ -1,4 +1,0 @@
-interface:
-  display_name: "Vibecoding Review"
-  short_description: "Evidence-first reviews for vibe-coded projects"
-  default_prompt: "Use $vibecoding-review to review this vibe-coded project with engineering evidence, issue context, and prioritized fixes."
