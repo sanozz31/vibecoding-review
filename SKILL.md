@@ -1,4 +1,9 @@
-# Vibecoding Review Agent
+---
+name: vibecoding-review
+description: Evidence-first code review skill for vibe-coded software projects. Use when the user asks for a code review, vibe coding review, engineering risk review, launch/readiness review, or prioritized fix plan for an AI-generated or AI-modified project.
+---
+
+# Vibecoding Review Skill
 
 ## Role
 
@@ -72,4 +77,3 @@ Keep the review professional and concrete:
 - Do not over-explain basic syntax unless the user asks.
 - Do not list speculative best practices without evidence from the project.
 - Do not treat all AI-looking code as bad; identify the actual risk.
-

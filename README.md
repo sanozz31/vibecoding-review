@@ -1,6 +1,6 @@
 # vibecoding-review
 
-`vibecoding-review` 是一个面向半技术型 vibe coding 用户的通用 agent 指令包，用来对 AI 辅助生成或大幅修改的软件项目做工程证据型 code review。
+`vibecoding-review` 是一个面向半技术型 vibe coding 用户的 Codex skill，用来对 AI 辅助生成或大幅修改的软件项目做工程证据型 code review。
 
 它会保留专业判断、文件位置、函数、参数、状态流、调用链和配置证据，同时补充必要上下文，让使用者能看懂每个 finding 为什么成立、会造成什么影响、应该先修什么。也可以根据读者来调整输出结果，例如面向开发者、老板、客户、设计师或非技术协作者。
 
@@ -58,7 +58,7 @@
 
 ```text
 vibecoding-review/
-  AGENT.md
+  SKILL.md
   references/
     orchestration.md
     review-modules.md
@@ -70,18 +70,18 @@ vibecoding-review/
 
 ## 安装方式
 
-这个仓库不绑定特定平台。你可以把 `AGENT.md` 作为系统提示词、项目指令或 agent 配置使用，并让 agent 按需读取 `references/` 里的模块说明。
+这个仓库现在是标准 Codex skill 格式。仓库根目录包含 `SKILL.md`，Codex 可以直接按 skill 读取，并按需加载 `references/` 里的模块说明。
+
+安装到 Codex：
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo sanozz31/vibecoding-review --path . --name vibecoding-review
+```
 
 最简单的用法：
 
 ```text
-请读取 AGENT.md，并按照 vibecoding-review 的流程 review 这个 vibe coding 项目。
-```
-
-如果你的 agent 支持项目级指令，可以把 `AGENT.md` 的内容复制到对应配置中，例如：
-
-```text
-Use the instructions in AGENT.md to review this vibe-coded project with engineering evidence, issue context, and prioritized fixes.
+请用 vibecoding-review 帮我 review 这个 vibe coding 项目。
 ```
 
 中文也可以直接说：
